@@ -7,7 +7,7 @@ const twitterClient = new Twit({
     access_token_secret: 'your_access_token_secret',
   });
 
-const fetchTwitterFeed = async (username) => {
+const fetchTwitterFeed = async (username: string) => {
   const tweets = await twitterClient.get('statuses/user_timeline', {
     screen_name: username,
     count: 10,

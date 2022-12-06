@@ -2,10 +2,10 @@ import React from 'react';
 import fetchTwitterFeed from './api/fetchTwitterFeed';
 
 
-const TwitterFeed = ({ tweets }) => {
+const TwitterFeed = ({ tweets }: {tweets: any}) => {
   return (
     <div className="twitter-feed">
-      {tweets.map((tweet) => (
+      {tweets.map((tweet: { id: React.Key | null | undefined; text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => (
         <div key={tweet.id} className="tweet">
           <p>{tweet.text}</p>
         </div>
@@ -15,7 +15,7 @@ const TwitterFeed = ({ tweets }) => {
 };
 
 
-const Tarot = ({ tweets }) => {
+const Tarot = ({ tweets }: {tweets: any}) => {
   return (
     <div>
       <h1>My Twitter Feed</h1>
